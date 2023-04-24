@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1 style="text-align : center;">Hello World</h1>
+<center>
+  <a href="/"> Liste des vehicules</a> <br> <br> <br>
+    Recherche<input type="text" name="keyword">
+    <input type="submit" name="rechercher"/></a> <br>
+  <table  border="1" cellpadding="10">
+    <thread>
+      <tr>
+        <th>ID</th>
+        <th>Marque</th>
+        <th>Modele</th>
+        <th>Annee</th>
+        <th>Couleur</th>
+        <th>Kilometrage</th>
+        <th>Prix</th>
+        <th>Statut</th>
+
+      </tr>
+    </thread>
+    <tbody>
+        <tr th:each="voiture : ${listeVoitureLouer}">
+            <td th:text="${voiture.getId()}">1</td>
+            <td th:text="${voiture.getMarque()}">...</td>
+            <td th:text="${voiture.getModele()}">...</td>
+            <td th:text="${voiture.getAnnee()}">1</td>
+            <td th:text="${voiture.getCouleur()}">...</td>
+            <td th:text="${voiture.getKilometrage()}">...</td>
+            <td th:text="${voiture.getPrix()}">1</td>
+            <td th:text="${voiture.getStatut()}">...</td>
+        </tr>
+
+    </tbody>
+  </table>
+</center>
+
+
+</table>
+</body>
+</html>

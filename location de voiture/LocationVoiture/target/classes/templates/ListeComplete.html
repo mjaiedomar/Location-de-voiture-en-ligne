@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="text-align : center;">Hello World</h1>
+<center>
+    <form th:action="@{/}">
+        <a href="/louer">Vehicule louer </a> <br> <br>
+                <h4>Recherche par </h4>
+                <h5>Marque, Modele ou Couleur</h5>
+        <input type="text" name="keyword">
+        <input type="submit" name="rechercher"/></a>
+        <a href="/"><input type="button" value="Clear"></a>
+        <br> <br>
+    </form>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Marque</th>
+            <th>Modele</th>
+            <th>Annee</th>
+            <th>Couleur</th>
+            <th>Kilometrage</th>
+            <th>Prix</th>
+            <th>Statut</th>
+            <th>Action</th>
+
+        </tr>
+        <tr th:each="voiture : ${listeVoiture}">
+            <td th:text="${voiture.getId()}">1</td>
+            <td th:text="${voiture.getMarque()}">...</td>
+            <td th:text="${voiture.getModele()}">...</td>
+            <td th:text="${voiture.getAnnee()}">1</td>
+            <td th:text="${voiture.getCouleur()}">...</td>
+            <td th:text="${voiture.getKilometrage()}">...</td>
+            <td th:text="${voiture.getPrix()}">1</td>
+            <td th:text="${voiture.getStatut()}">...</td>
+            <td>
+                <a th:href="@{'/edit/' + ${voiture.id}}">Modifier</a> &nbsp
+                <a th:href="@{'/delete/' + ${voiture.id}}">Supprimer</a>
+                <a th:href="@{'/Reservation/' + ${voiture.id}}">Reserver</a> &nbsp
+                    <a th:action="@{'/Retourner/' + ${voiture.id}}" th:href="@{'/Retourner/' + ${voiture.id}}">Retourner</a>
+
+            </td>
+
+        </tr>
+
+    </table>
+</center>
+
+</body>
+</html>

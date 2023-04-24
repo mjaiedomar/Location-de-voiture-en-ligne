@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "8935b0cc-e72d-415a-bcdc-d6fbce32c5e4",
+		"name": "LocationVoiture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listAllLouer",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "listSearchCouleurRouge",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateVoiture",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mettreAJour?id=1&marque=Porshe&modele=Carrera&annee=2010&couleur=Bleu&kilometrage=72000&prix=99.95&statut=Disponible",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mettreAJour"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "marque",
+							"value": "Porshe"
+						},
+						{
+							"key": "modele",
+							"value": "Carrera"
+						},
+						{
+							"key": "annee",
+							"value": "2010"
+						},
+						{
+							"key": "couleur",
+							"value": "Bleu"
+						},
+						{
+							"key": "kilometrage",
+							"value": "72000"
+						},
+						{
+							"key": "prix",
+							"value": "99.95"
+						},
+						{
+							"key": "statut",
+							"value": "Disponible"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateStatut",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/updateStatut/1?statut=Disponible",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateStatut",
+						"1"
+					],
+					"query": [
+						{
+							"key": "statut",
+							"value": "Disponible"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaveVehicule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n  \"marque\":\"Toyota\",\r\n  \"modele\":\"Matrix\",\r\n  \"annee\":2012,\r\n  \"couleur\":\"Bleu\",\r\n  \"kilometrage\":100000,\r\n  \"prix\":99.89,\r\n  \"statut\":\"loue\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/SaveVoiture",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SaveVoiture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaveReservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dateReservation\":\"2022-03-04\",\r\n    \"dateRetour\":\"2022-04-04\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/SaveReservation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SaveReservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaveClient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\":\"Mohamed\",\r\n    \"prenom\":\"Kachach\",\r\n    \"email\":\"1584476@bdeb.qc.ca\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/SaveClient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SaveClient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteVoiture",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/supprimer/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"supprimer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

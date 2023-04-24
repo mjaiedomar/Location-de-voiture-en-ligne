@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<h1>Mise a jour d'un véhicule</h1>
+<form name="#" th:action="@{'/update/' + *{id}}" th:object="${voitureAModifier}" method="get">
+  <table border="1" cellpadding="=10">
+    <tr>
+      <td>Marque:</td>
+      <td><input type="text" th:field="*{marque}"></td>
+    </tr>
+    <tr>
+      <td>Modele</td>
+      <td><input type="text" th:field="*{modele}"></td>
+      </td>
+    </tr>
+    <tr>
+      <td>Annee</td>
+      <td><input type="text" th:field="*{annee}"></td>
+      </td>
+    </tr>
+    <tr>
+      <td>Couleur</td>
+      <td><input type="text" th:field="*{couleur}"></td>
+    </tr>
+    <tr>
+      <td>Kilometrage</td>
+      <td><input type="text" th:field="*{kilometrage}"></td>
+    </tr>
+    <tr>
+      <td>Prix</td>
+      <td><input type="text" th:field="*{prix}"></td>
+    </tr>
+    <tr>
+      <td>Statut</td>
+      <td><input type="text" th:field="*{statut}"></td>
+    </tr>
+
+    <tr>
+      <td><button type="Submit">Soumettre</button></td>
+    </tr>
+
+
+  </table>
+</form>
+</body>
+</html>
